@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History Page</title>
+
+  <!-- Tailwind + DaisyUI CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Lexend Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    .lexend-font {
+      font-family: "Lexend", sans-serif;
+      font-optical-sizing: auto;
+    }
+  </style>
+</head>
+
+<body class="lexend-font">
+  <header>
+    <nav>
+      <div class="navbar bg-base-300 p-6">
+        <div class="flex flex-col md:flex-row md:container mx-auto justify-around">
+          <button class="btn btn-ghost bg-[#B4F461] text-xl font-semibold  ">Blog</button>
+          <div class="flex flex-row space-x-2 justify-center items-center">
+            <img src="assets/logo.png" alt="">
+            <h1 class="text-xl font-semibold">Donate Bangladesh</h1>
+          </div>
+          <div class="flex flex-row space-x-2 justify-center items-center">
+            <img src="assets/coin.png" alt="">
+            <h3>5500</h3>
+            <p>BDT</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="banner flex flex-row justify-center items-center space-x-5 mt-10 md:mt-14">
+      <button class="btn btn-ghost bg-[#B4F461] text-xl font-semibold  ">Donation</button>
+      <button id="history-btn" class="btn btn-ghost border-2 border-gray-300  text-xl font-semibold  ">History</button>
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <div id="history-container">
+
+    </div>
+
+  </main>
+
+
+
+  <script src="JS/script.js"></script>
+</body>
+
+</html>
