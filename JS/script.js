@@ -20,38 +20,54 @@ document.getElementById('donate-btn').addEventListener('click', function () {
         document.getElementById('current-balance').innerText = newCurrentBalance
 
         // donate_amount.value = '';
+
+        // window.location.href = '/history.html';
+        // alert("Successful")
+
+        const p = document.createElement('p');
+        p.innerText = `Added ${donateAmount} tk to the ${cartTitle}`;
+        // console.log(p)
+
+        document.getElementById('history-container').appendChild(p);
     }
     else {
         alert('You don\'t have enough money to Donate!');
     }
-    
+
 })
 
 
 // History Page work
-document.getElementById('donate-btn').addEventListener('click', function (event) {
-    event.preventDefault();
-    const current_balance = document.getElementById('current-balance').innerText
-    const currentBalance = parseFloat(current_balance);
-    const donate_amount = document.getElementById('input-donate-amount').value;
-    const donateAmount = parseFloat(donate_amount)
-    // console.log(typeof(donateAmount))
-    // console.log(typeof(currentBalance))
-    // console.log(currentBalance)
+// document.getElementById('donate-btn').addEventListener('click', function (event) {
+//     event.preventDefault();
+//     const current_balance = document.getElementById('current-balance').innerText
+//     const currentBalance = parseFloat(current_balance);
+//     const donate_amount = document.getElementById('input-donate-amount').value;
+//     const donateAmount = parseFloat(donate_amount)
+//     // console.log(typeof(donateAmount))
+//     // console.log(typeof(currentBalance))
+//     // console.log(currentBalance)
 
-    const cartTitle = document.getElementById('card-title').innerText
+//     const cartTitle = document.getElementById('card-title').innerText
 
-    // if(donateAmount <= currentBalance){
-    //     window.location.href = '/history.html';
-    //     // alert("Successful")
+//     if (donateAmount <= currentBalance) {
+//         window.location.href = '/history.html';
+//         // alert("Successful")
 
-    //     const p = document.createElement('p');
-    //     p.innerText = `Added ${donateAmount} tk to the ${cartTitle}`;
-    //     console.log(p)
+//         const p = document.createElement('p');
+//         p.innerText = `Added ${donateAmount} tk to the ${cartTitle}`;
+//         // console.log(p)
 
-    //     document.getElementById('history-container').appendChild(p);
-    // }
-    // else{
-    //     alert('You have not enough Money!');
-    // }
+//         document.getElementById('history-container').appendChild(p);
+//     }
+//     else {
+//         alert('You have not enough Money!');
+//     }
+// })
+
+document.getElementById('history-btn').addEventListener('click',function(){
+    // Redirect to the history page
+    window.location.href = '/history.html';
+
+    
 })
