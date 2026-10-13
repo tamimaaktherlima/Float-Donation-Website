@@ -46,7 +46,7 @@
 
         <!-- Banner Section -->
         <div class="banner flex flex-row justify-center items-center space-x-5 mt-10 md:mt-14">
-            <button class="btn btn-ghost bg-[#B4F461] text-xl font-semibold  ">Donation</button>
+            <button id="donate-btn" class="btn btn-ghost bg-[#B4F461] text-xl font-semibold  ">Donation</button>
             <button id="history-btn" class="btn btn-ghost border-2 border-gray-300  text-xl font-semibold  ">History</button>
         </div>
     </header>
@@ -72,7 +72,7 @@
                     <textarea name="" id="input-donate-amount" cols="15" rows="1" placeholder="Write Donation Amount"
                         class="py-8 pl-5 rounded-lg"></textarea>
                     <div class="flex justify-center bg-[#B4F461] rounded-md">
-                        <button id="donate-btn" class="font-semibold text-lg py-4">Donate Now</button>
+                        <button id="donateNow-btn" class="font-semibold text-lg py-4">Donate Now</button>
                     </div>
                 </div>
             </div>
@@ -132,14 +132,14 @@
         <!-- Popup Model Overlay -->
         <div>
             <!-- Open the modal using ID.showModal() method -->
-            <button class="btn" onclick="my_modal_5.showModal()">open modal</button>
+            <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
             <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box text-center">
                     <h3 class="text-2xl font-extrabold">Congrates!</h3>
                     <div class="flex justify-center ">
                         <img src="assets/coin.png" alt="" >
                     </div>
-                    <p class="py-4">You have donate for Humankind</p>
+                    <p id="modal-msg" class="py-4">You have donate for Humankind</p>
                     <h3 class="text-lg font-semibold">Successfully</h3>
                     <div class="modal-action justify-center">
                         <form method="dialog">
@@ -157,7 +157,8 @@
     </footer>
 
     <script src="JS/script.js"></script>
-    <!-- <script src="JS/history.js"></script> -->
+    <script src="JS/history.js"></script>
+    <script src="JS/common.js"></script>
 </body>
 
 </html>

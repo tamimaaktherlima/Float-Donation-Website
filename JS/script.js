@@ -1,14 +1,16 @@
 // console.log('Welcome')
 
-document.getElementById('donate-btn').addEventListener('click', function () {
-    const current_balance = document.getElementById('current-balance').innerText
-    const currentBalance = parseFloat(current_balance);
+document.getElementById('donateNow-btn').addEventListener('click', function () {
+    // const current_balance = document.getElementById('current-balance').innerText
+    const currentBalance = getTextById('current-balance');
 
-    const card1_Current_Amount = document.getElementById('card1-currentAmount').innerText
-    const card1CurrentAmount = parseFloat(card1_Current_Amount);
+    // const card1_Current_Amount = document.getElementById('card1-currentAmount').innerText
+    // const card1CurrentAmount = parseFloat(card1_Current_Amount);
+    const card1CurrentAmount = getTextById('card1-currentAmount');
 
-    const donate_amount = document.getElementById('input-donate-amount').value;
-    const donateAmount = parseFloat(donate_amount);
+    // const donate_amount = document.getElementById('input-donate-amount').value;
+    // const donateAmount = parseFloat(donate_amount);
+    const donateAmount = getValueById('input-donate-amount');
 
     // minus the donate amount from the current main balance
     if (donateAmount <= currentBalance) {
@@ -19,55 +21,36 @@ document.getElementById('donate-btn').addEventListener('click', function () {
         const newCurrentBalance = currentBalance - donateAmount;
         document.getElementById('current-balance').innerText = newCurrentBalance
 
-        // donate_amount.value = '';
+        donate_amount = '';
 
-        // window.location.href = '/history.html';
-        // alert("Successful")
+        // console.log(typeof(donateAmount))
+        // console.log(typeof(currentBalance))
+        // console.log(currentBalance)
 
+        const cartTitle = document.getElementById('card-title').innerText
+
+        const div = document.createElement('div');
+        const h1 = document.createElement('h1');
         const p = document.createElement('p');
-        p.innerText = `Added ${donateAmount} tk to the ${cartTitle}`;
+        h1.innerText = `Added ${donateAmount} tk to the ${cartTitle}`;
+        p.innerText = new Date().toLocaleString();
         // console.log(p)
 
-        document.getElementById('history-container').appendChild(p);
+        // Append 
+        div.appendChild(h1);
+        div.appendChild(p);
+
+        document.getElementById('history-container').append(div);
+
+        // popup
+        document.getElementById('my_modal_5').showModal();
     }
     else {
         alert('You don\'t have enough money to Donate!');
+        return;
     }
 
+    // document.getElementById('my_modal_5').showModal();
 })
 
 
-// History Page work
-// document.getElementById('donate-btn').addEventListener('click', function (event) {
-//     event.preventDefault();
-//     const current_balance = document.getElementById('current-balance').innerText
-//     const currentBalance = parseFloat(current_balance);
-//     const donate_amount = document.getElementById('input-donate-amount').value;
-//     const donateAmount = parseFloat(donate_amount)
-//     // console.log(typeof(donateAmount))
-//     // console.log(typeof(currentBalance))
-//     // console.log(currentBalance)
-
-//     const cartTitle = document.getElementById('card-title').innerText
-
-//     if (donateAmount <= currentBalance) {
-//         window.location.href = '/history.html';
-//         // alert("Successful")
-
-//         const p = document.createElement('p');
-//         p.innerText = `Added ${donateAmount} tk to the ${cartTitle}`;
-//         // console.log(p)
-
-//         document.getElementById('history-container').appendChild(p);
-//     }
-//     else {
-//         alert('You have not enough Money!');
-//     }
-// })
-
-document.getElementById('history-btn').addEventListener('click',function(){
-    // Redirect to the history page
-    window.location.href = '/history.html';
-
-    
-})
