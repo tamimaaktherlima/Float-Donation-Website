@@ -31,7 +31,7 @@
         <nav>
             <div class="navbar bg-base-300 p-6">
                 <div class="flex flex-col md:flex-row md:container mx-auto justify-around">
-                    <button class="btn btn-ghost bg-[#B4F461] text-xl font-semibold  ">Blog</button>
+                    <button id="blog-btn" class="btn btn-ghost bg-[#B4F461] text-xl font-semibold  ">Blog</button>
                     <div class="flex flex-row space-x-2 justify-center items-center">
                         <img src="assets/logo.png" alt="">
                         <h1 class="text-xl font-semibold">Donate Bangladesh</h1>
@@ -73,7 +73,7 @@
                     <textarea name="" id="input-donate-amount" cols="15" rows="1" placeholder="Write Donation Amount"
                         class="py-8 pl-5 rounded-lg"></textarea>
                     <div class="flex justify-center bg-[#B4F461] rounded-md">
-                        <button id="donateNow-btn" class="font-semibold text-lg py-4">Donate Now</button>
+                        <button id="donateNow1-btn" class="font-semibold text-lg py-4">Donate Now</button>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                 <div class="card-body space-y-2">
                     <div class="flex flex-row space-x-2 justify-center items-center text-[#111111] text-opacity-70">
                         <img src="assets/coin.png" alt="">
-                        <h3>600</h3>
+                        <h3 id="card2-currentAmount">600</h3>
                         <p>BDT</p>
                     </div>
                     <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
@@ -95,10 +95,10 @@
                         medical supplies, to those affected by this calamity. Together, we can offer crucial support and
                         help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a
                         real difference. Please consider donating today to assist those in urgent need.</p>
-                    <textarea name="" id="" cols="15" rows="1" placeholder="Write Donation Amount"
+                    <textarea name="" id="input-donate-amount2" cols="15" rows="1" placeholder="Write Donation Amount"
                         class="py-8 pl-5 rounded-lg"></textarea>
                     <div class="flex justify-center bg-[#B4F461] rounded-md">
-                        <button class="font-semibold text-lg py-4">Donate Now</button>
+                        <button id="donateNow2-btn" class="font-semibold text-lg py-4">Donate Now</button>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@
                 <div class="card-body space-y-2">
                     <div class="flex flex-row space-x-2 justify-center items-center text-[#111111] text-opacity-70">
                         <img src="assets/coin.png" alt="">
-                        <h3>2400</h3>
+                        <h3 id="card3-currentAmount">2400</h3>
                         <p>BDT</p>
                     </div>
                     <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
@@ -121,10 +121,10 @@
                         receive the care and support they need during this challenging time. Every donation plays a
                         vital role in alleviating their suffering and aiding in their recovery. Please consider making a
                         donation to support these brave individuals in their time of need.</p>
-                    <textarea name="" id="" cols="15" rows="1" placeholder="Write Donation Amount"
+                    <textarea name="" id="input-donate-amount3" cols="15" rows="1" placeholder="Write Donation Amount"
                         class="py-8 pl-5 rounded-lg"></textarea>
                     <div class="flex justify-center bg-[#B4F461] rounded-md">
-                        <button class="font-semibold text-lg py-4">Donate Now</button>
+                        <button id="donateNow3-btn" class="font-semibold text-lg py-4">Donate Now</button>
                     </div>
                 </div>
             </div>
@@ -157,6 +157,7 @@
         
     </footer>
 
+    <script src="JS/fqa.js"></script>
     <script src="JS/script.js"></script>
     <script src="JS/history.js"></script>
     <script src="JS/common.js"></script>

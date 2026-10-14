@@ -40,32 +40,32 @@ document.getElementById('donate-btn').addEventListener('click', function () {
     // Redirect to the history page
 
 
-    const donateBtn = document.getElementById('donate-btn');
-    const historyBtn = document.getElementById('history-btn');
+    // const donateBtn = document.getElementById('donate-btn');
+    // const historyBtn = document.getElementById('history-btn');
     
 
     // window.location.href = '/index.html';
     
-    donateBtn.classList.add('bg-[#B4F461]')
+    document.getElementById('donate-btn').classList.add('bg-[#B4F461]')
     
-    historyBtn.classList.remove('bg-[#B4F461]')
+    document.getElementById('history-btn').classList.remove('bg-[#B4F461]')
     
     window.location.href = '/index.html';
 
 })
 
-document.getElementById('history-btn').addEventListener('click', function () {
-    // Redirect to the history page
+// document.getElementById('history-btn').addEventListener('click', function () {
+//     // Redirect to the history page
 
 
-    const donateBtn = document.getElementById('donate-btn');
-    const historyBtn = document.getElementById('history-btn');
+//     const donateBtn = document.getElementById('donate-btn');
+//     const historyBtn = document.getElementById('history-btn');
 
-    // window.location.href = '/history.html';
+//     // window.location.href = '/history.html';
     
-    historyBtn.classList.add('bg-[#B4F461]')
+//     historyBtn.classList.add('bg-[#B4F461]')
     
-    donateBtn.classList.remove('bg-[#B4F461]')
+//     donateBtn.classList.remove('bg-[#B4F461]')
     
-    window.location.href = '/history.html';
-})
+//     window.location.href = '/history.html';
+// })
