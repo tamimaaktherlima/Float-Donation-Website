@@ -19,19 +19,3 @@ document.getElementById('donateNow3-btn').addEventListener('click', function () 
 document.getElementById('blog-btn').addEventListener('click', function () {
     window.location.href = '/fqa.html'
 })
-
-document.getElementById('history-btn').addEventListener('click', function () {
-    // Redirect to the history page
-
-
-    // const donateBtn = document.getElementById('donate-btn');
-    // const historyBtn = document.getElementById('history-btn');
-
-    // window.location.href = '/history.html';
-
-    document.getElementById('history-btn').classList.remove('bg-[#B4F461]')
-
-    document.getElementById('donate-btn').classList.add('bg-[#B4F461]')
-
-    window.location.href = '/history.html';
-})
