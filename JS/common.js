@@ -27,6 +27,12 @@ function afterClickedDonateBtn(donateAmountId, cardCurrentAmountId) {
         const newCurrentBalance = currentBalance - donateAmount;
         document.getElementById('current-balance').innerText = newCurrentBalance;
 
+        // show popup model
+        document.getElementById('my_modal_5').showModal();
+
+        // clear textarea
+        document.getElementById(donateAmountId).value = '';
+
         // return
 
         // const cartTitle = document.getElementById('card-title').innerText
