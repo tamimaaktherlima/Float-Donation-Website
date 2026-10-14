@@ -1,40 +1,20 @@
-// console.log('Welcome')
+// const historyContainer = document.getElementById('history-container');
+// const cartTitle = document.getElementById('card-title').innerText;
 
+// const donationHistory =
+//     JSON.parse(localStorage.getItem('donationHistory')) || [];
 
-// History Page work
-// document.getElementById('donate-btn').addEventListener('click', function (event) {
-//     event.preventDefault();
-//     const current_balance = document.getElementById('current-balance').innerText
-//     const currentBalance = parseFloat(current_balance);
-//     const donate_amount = document.getElementById('input-donate-amount').value;
-//     const donateAmount = parseFloat(donate_amount)
-//     // console.log(typeof(donateAmount))
-//     // console.log(typeof(currentBalance))
-//     // console.log(currentBalance)
+// donationHistory.forEach(function (donation) {
 
-//     const cartTitle = document.getElementById('card-title').innerText
+//     const donationElement = document.createElement('div');
 
-//     if (donateAmount <= currentBalance) {
-//         // window.location.href = '/history.html';
-//         // alert("Successful")
+//     donationElement.innerHTML = `
+//         <p>${donation.amount} tk is ${cartTitle} </p>
+//         <p>Date: ${donation.date}</p>
+//     `;
 
-//         const div = document.createElement('div');
-//         const h1 = document.createElement('h1');
-//         const p = document.createElement('p');
-//         h1.innerText = `Added ${donateAmount} tk to the ${cartTitle}`;
-//         p.innerText = new Date().toLocaleString();
-//         // console.log(p)
-
-//         // Append 
-//         div.appendChild(h1);
-//         div.appendChild(p);
-
-//         document.getElementById('show-history').appendChild(div)
-//     }
-//     else {
-//         alert('You have not enough Money!');
-//     }
-// })
+//     historyContainer.appendChild(donationElement);
+// });
 
 document.getElementById('donate-btn').addEventListener('click', function () {
     // Redirect to the history page

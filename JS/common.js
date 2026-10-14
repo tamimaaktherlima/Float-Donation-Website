@@ -33,31 +33,47 @@ function afterClickedDonateBtn(donateAmountId, cardCurrentAmountId) {
         // clear textarea
         document.getElementById(donateAmountId).value = '';
 
-        // return
 
-        // const cartTitle = document.getElementById('card-title').innerText
+        // For showing the details in history 
+        const cartTitle = document.getElementById('card-title').innerText;
+        // get the previous history
+        const donationHistory = JSON.parse(localStorage.getItem('donationHistory')) || [];
 
-        // const div = document.createElement('div');
-        // const h1 = document.createElement('h1');
-        // const p = document.createElement('p');
-        // h1.innerText = `Added ${donateAmount} tk to the ${cartTitle}`;
-        // p.innerText = new Date().toLocaleString();
-        // console.log(p)
+        // Create new donation
+        const newDonation = {
+            amount: donateAmount,
+            date: new Date().toLocaleString()
+        };
 
-        // Append 
-        // div.appendChild(h1);
-        // div.appendChild(p);
+        // add new donation
+        donationHistory.push(newDonation)
+        // saved update history
+        localStorage.setItem = (
+            'donationHistory',
+            JSON.stringify(donationHistory)
+        )
 
-        // document.getElementById('history-container').append(div);
 
-        // // popup
-        // document.getElementById('my_modal_5').showModal();
+        const historyContainer = document.getElementById('history-container');
+
+        donationHistory.forEach(function (newDonation) {
+
+            const donationElement = document.createElement('div');
+
+            donationElement.innerHTML = `
+            <p>${newDonation.amount} tk is ${cartTitle} </p>
+            <p>Date: ${newDonation.date}</p>
+            `;
+
+            historyContainer.appendChild(donationElement);
+            window.location.href = './history.html';
+        });
+
+        // window.location.href = './history.html';
     }
     else {
         alert('You don\'t have enough money to Donate!');
         return;
     }
-
-    // document.getElementById('my_modal_5').showModal();
 
 }
