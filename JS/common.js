@@ -10,7 +10,13 @@ function getValueById(id) {
     return valueIntoNumber
 }
 
-function afterClickedDonateBtn(donateAmountId, cardCurrentAmountId) {
+function getCardTitleById(id) {
+    const title = document.getElementById(id).innerText;
+    // const valueIntoNumber = parseFloat(value);
+    return title
+}
+
+function afterClickedDonateBtn(donateAmountId, cardCurrentAmountId, cartTitleId) {
 
     const currentBalance = getTextById('current-balance');
 
@@ -35,7 +41,7 @@ function afterClickedDonateBtn(donateAmountId, cardCurrentAmountId) {
 
 
         // For showing the details in history 
-        const cartTitle = document.getElementById('card-title').innerText;
+        const cartTitle = getCardTitleById(cartTitleId);
         // get the previous history
         const donationHistory = JSON.parse(localStorage.getItem('donationHistory')) || [];
 
@@ -48,7 +54,7 @@ function afterClickedDonateBtn(donateAmountId, cardCurrentAmountId) {
         // add new donation
         donationHistory.push(newDonation)
         // saved update history
-        localStorage.setItem = (
+        localStorage.setItem(
             'donationHistory',
             JSON.stringify(donationHistory)
         )
