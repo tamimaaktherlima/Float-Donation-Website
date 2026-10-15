@@ -17,5 +17,5 @@ document.getElementById('donateNow3-btn').addEventListener('click', function () 
 })
 
 document.getElementById('blog-btn').addEventListener('click', function () {
-    window.location.href = '/fqa.html'
+    window.location.href = './fqa.html'
 })
